@@ -1,5 +1,10 @@
 import Feedback from './Feedback/Feedback';
+import css from './App.module.css';
 
 export const App = () => {
-  return <Feedback />;
+  return (
+    <div className={css.container}>
+      <Feedback />
+    </div>
+  );
 };
