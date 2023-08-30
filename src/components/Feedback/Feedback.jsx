@@ -20,9 +20,7 @@ class Feedback extends Component {
 
   countTotalFeedback = () => {
     const total = Object.values(this.state);
-    return total.reduce((acc, el) => {
-      return (acc = acc + el);
-    }, 0);
+    return total.reduce((acc, el) => (acc += el), 0);
   };
 
   countPositiveFeedbackPercentage = () => {
