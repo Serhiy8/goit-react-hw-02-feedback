@@ -13,9 +13,7 @@ class Feedback extends Component {
 
   addStatesCount = evt => {
     const optionKey = evt.target.textContent;
-    this.setState(prevStarte => {
-      return { [optionKey]: prevStarte[optionKey] + 1 };
-    });
+    this.setState(prevState => ({ [optionKey]: prevState[optionKey] + 1 }));
   };
 
   countTotalFeedback = () => {
@@ -24,7 +22,8 @@ class Feedback extends Component {
   };
 
   countPositiveFeedbackPercentage = () => {
-    return (this.state.good / this.countTotalFeedback()) * 100;
+    const total = this.countTotalFeedback();
+    return total ? ((this.state.good / total) * 100).toFixed(0) : 0;
   };
 
   render() {
