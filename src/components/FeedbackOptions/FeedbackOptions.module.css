@@ -13,6 +13,7 @@
   border: none;
   outline: none;
   transition: linear 100ms;
+  cursor: pointer;
 }
 
 .button:hover {
