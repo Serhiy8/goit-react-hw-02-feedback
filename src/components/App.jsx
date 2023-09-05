@@ -14,7 +14,7 @@ export class App extends Component {
   };
 
   addStatesCount = evt => {
-    const optionKey = evt.target.textContent;
+    const optionKey = evt.target.value;
     this.setState(prevState => ({ [optionKey]: prevState[optionKey] + 1 }));
   };
 
